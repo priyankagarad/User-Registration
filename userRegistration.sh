@@ -1,5 +1,6 @@
 #!/bin/bash -x
-NAMEPATTERN="^[A-Z][a-z]{3,}$"
+NAME_PATTERN="^[A-Z][a-z]{3,}$"
+EMAIL_PATTERN="^[a-zA-z0-9]{3,}+[@][a-zA-z0-9]{3,}+[.][a-ZA-Z]{2,4}$"
 
 function validation()
 {
@@ -19,3 +20,6 @@ validation $name $NAMEPATTERN
 read -p "enter last name: " lastName
 validation $lastName $NAMEPATTERN
 
+//checking mailid is valid or not 
+read -p "enter email"  email
+validation $email $EMAIL_PATTERN
