@@ -15,3 +15,7 @@ function validation()
 read -p "enter first name: " name
 validation $name $NAMEPATTERN
 
+//cheking last name is valid or not
+read -p "enter last name: " lastName
+validation $lastName $NAMEPATTERN
+
